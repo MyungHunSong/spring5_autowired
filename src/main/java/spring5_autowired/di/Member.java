@@ -64,7 +64,6 @@ public class Member {
 		this.name = name;
 	}
 
-
 	public LocalDateTime getRegisterDateTime() {
 		return registerDateTime;
 	}
