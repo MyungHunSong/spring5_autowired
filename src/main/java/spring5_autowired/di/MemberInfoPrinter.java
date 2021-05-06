@@ -1,6 +1,7 @@
 package spring5_autowired.di;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import spring5_autowired.exception.MemberNotFoundException;
 
@@ -25,6 +26,7 @@ public class MemberInfoPrinter {
 	}
 	
 	@Autowired
+	@Qualifier("printer1")
 	public void setPrinter(MemberPrinter printer) {
 		this.printer = printer;
 	}
