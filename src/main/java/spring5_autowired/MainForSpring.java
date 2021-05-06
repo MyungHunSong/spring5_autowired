@@ -39,7 +39,6 @@ public class MainForSpring {
 				processNewCommand(command.split(" ")); // 뛰우기 해줘야한다. 뛰운 자리를 기준으로 배열로 만드러 주기때문에/
 				System.out.println("command >> "+command);
 				continue;
-				
 			}else if(command.startsWith("change")) {
 				processChangeCommand(command.split(" "));
 				continue;
@@ -56,6 +55,7 @@ public class MainForSpring {
 			printHelp();
 		}
 	}
+	
 	// 버전 췤
 	private static void processVersionCommand() {
 		VersionPrinter versionPrinter = ctx.getBean("versionPrinter", VersionPrinter.class);
@@ -83,6 +83,7 @@ public class MainForSpring {
 			printHelp();
 			return;
 		}
+		
 		MemberRegisterService regSvc = ctx.getBean("memberRegSvc",MemberRegisterService.class);
 		RegisterRequest req = new RegisterRequest();
 		
@@ -123,6 +124,8 @@ public class MainForSpring {
 		System.out.println("new 이메일 이름 암호 암호확인");
 		System.out.println("change 이메일 현재비번 변경비번");
 		System.out.println("list");
+		System.out.println("info");
+		System.out.println("version");
 		System.out.println();
 	}
 }

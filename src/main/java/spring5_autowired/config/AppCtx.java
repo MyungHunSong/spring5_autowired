@@ -28,7 +28,7 @@ public class AppCtx {
 	@Bean
 	public ChangePasswordService changePwdSvc() {
 		ChangePasswordService pwdSvc = new ChangePasswordService();
-		pwdSvc.setMemberDao(memberDao());
+//		pwdSvc.setMemberDao(memberDao());
 		return pwdSvc;
 	}
 	
@@ -39,8 +39,8 @@ public class AppCtx {
 	
 	// 회원 리스트로 출력하기
 	@Bean
-	public MemberListPrinter listPrinter(MemberDao memberDao, MemberPrinter printer) {
-		return new MemberListPrinter(memberDao, printer);
+	public MemberListPrinter listPrinter() {
+		return new MemberListPrinter();
 	}
 	
 	// 이메일로 회원 출력

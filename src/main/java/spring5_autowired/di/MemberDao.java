@@ -12,10 +12,12 @@ public class MemberDao {
 	public Member selectByEmail(String email) {
 		return map.get(email);
 	}
+	
 	public void insert(Member member) {
 		member.setId(++nexId);
 		map.put(member.getEmail(), member);
 	}
+	
 	public void update(Member member) {
 		map.put(member.getEmail(), member);
 	}

@@ -17,13 +17,14 @@ public class Member {
 		}
 		this.password = newPassword;
 	}	
-	public Member( String email, String password, String name, LocalDateTime registerDateTime) {
+	// 순서도 중요하다 순서 꼬이니까 개같은거 뽑아주더라~
+	public Member( String email,  String name, String password, LocalDateTime registerDateTime) {
 		this.email = email;
-		this.password = password;
 		this.name = name;
+		this.password = password;
 		this.registerDateTime = registerDateTime;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}

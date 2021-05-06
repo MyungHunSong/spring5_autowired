@@ -1,14 +1,17 @@
 package spring5_autowired.di;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import spring5_autowired.exception.MemberNotFoundException;
 
 public class ChangePasswordService {
+	
+	@Autowired
 	private MemberDao memberDao;
 
-	//
-	public void setMemberDao(MemberDao memberDao) {
-		this.memberDao = memberDao;
-	}
+//	public void setMemberDao(MemberDao memberDao) {
+//		this.memberDao = memberDao;
+//	}
 	
 	public void changePassword(String email, String oldPwd, String newPwd) {
 		Member member = memberDao.selectByEmail(email);
